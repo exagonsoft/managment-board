@@ -1,0 +1,2 @@
+import { lazy } from "react";
+

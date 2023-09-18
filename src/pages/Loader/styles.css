@@ -1,0 +1,85 @@
+.loader-container {
+    display: flex;
+    position: fixed;
+    width: 100vw !important;
+  
+    height: 100%;
+    z-index: 100;
+  }
+  
+  .loader-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .loader-wrapper > h1{
+      position: absolute;
+      margin-top: 15rem;
+      margin-left: 1rem;
+  }
+  
+  .blur-effect {
+    backdrop-filter: blur(10px); /* Apply a blur effect to the background */
+    background-color: rgba(
+      255,
+      255,
+      255,
+      0.2
+    ); /* Add a semi-transparent background color */
+    width: 100%;
+    height: 100%;
+  }
+  
+  .spinner-container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .spinner-container > img {
+    position: absolute;
+    width: 6rem;
+  }
+  
+  .spinner {
+    width: 6.8rem;
+    height: 6.8rem;
+    border: 6px solid transparent;
+    border-top-color: #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite, changeColor 5s linear infinite; /* Add color change animation */
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes changeColor {
+      0% {
+        border-top-color: #3498db;
+      }
+      25% {
+        border-top-color: #e74c3c;
+      }
+      50% {
+        border-top-color: #2ecc71;
+      }
+      75% {
+        border-top-color: #f39c12;
+      }
+      100% {
+        border-top-color: #3498db;
+      }
+    }
+  
